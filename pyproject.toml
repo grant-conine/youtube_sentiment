@@ -1,0 +1,35 @@
+[project]
+name = "youtube_sentiment"
+version = "0.1.0"
+authors = [
+    { name="Grant Conine", email="gconine@gmail.com"},
+]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+
+description = "Scrape youtube comments from popular miniature painters to identify topics which create the most divisive comments sections."
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+]
+
+requires-python= ">=3.12"
+dependencies = [
+    "google-api-python-client~=2.127.0",
+    "polars~=0.20.23",
+]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "/.github",
+  "/docs",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["youtube_sentiment"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

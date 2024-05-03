@@ -1,2 +1,4 @@
-google-api-python-client
-pandas
+google-api-python-client~=2.127.0
+ipykernel
+polars~=0.20.23
+-e .
